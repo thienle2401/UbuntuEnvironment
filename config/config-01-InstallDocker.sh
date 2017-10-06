@@ -28,6 +28,6 @@ sudo add-apt-repository -y \
 sudo apt-get update
 
 # install Docker CE
-sudo apt-get install docker-ce
+sudo apt-get install -y docker-ce
 
 echo "--------------------------------------------"
