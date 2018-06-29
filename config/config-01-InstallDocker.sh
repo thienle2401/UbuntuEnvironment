@@ -16,9 +16,9 @@ sudo apt-get install -y \
     ca-certificates \
     curl \
     software-properties-common
-	
+
 # add Dockers official GPG ke
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -	
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 # set up the stable repository
 sudo add-apt-repository -y \
@@ -29,5 +29,9 @@ sudo apt-get update
 
 # install Docker CE
 sudo apt-get install -y docker-ce
+
+# postinstall config
+sudo groupadd docker
+sudo usermod -aG docker $USER
 
 echo "--------------------------------------------"
